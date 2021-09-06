@@ -65,10 +65,12 @@ export default function Sold() {
   const classes = useStyles();
 
   const [products, setProducts] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
 
   const ref = firebase.firestore().collection("products");
 
+  //REALTIME GET FUNCTION
   function getProducts() {
     setLoading(true);
     ref.onSnapshot((querySnapshot) => {
@@ -83,6 +85,7 @@ export default function Sold() {
 
   useEffect(() => {
     getProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
