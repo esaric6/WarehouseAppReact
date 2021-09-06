@@ -8,6 +8,7 @@ import firebase from "../../services/firebase";
 const EditFrom = ({ product, handleClose }) => {
   const ref = firebase.firestore().collection("products");
 
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState(product.name);
   const [code, setCode] = useState(product.code);
@@ -27,6 +28,7 @@ const EditFrom = ({ product, handleClose }) => {
     sold: "",
   };
 
+  // EDIT FUNCTION
   function editItem(updatedItem) {
     setLoading();
     ref
