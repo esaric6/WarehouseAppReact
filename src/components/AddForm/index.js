@@ -16,7 +16,6 @@ const AddForm = ({ handleClose }) => {
   const [reservation, setReservation] = useState("");
   const [sold, setSold] = useState("");
   const [file, setFile] = useState(null);
-  // eslint-disable-next-line no-unused-vars
   const [url, setURL] = useState("");
 
   const paperStyle = { padding: "0 15px 40px 15px", width: 250 };
@@ -26,7 +25,6 @@ const AddForm = ({ handleClose }) => {
     setFile(e.target.files[0]);
   };
 
-  // ADD FUNCTION
   function addItem(newItem) {
     ref
       .doc(newItem.id)
